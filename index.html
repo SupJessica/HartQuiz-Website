@@ -1427,6 +1427,368 @@
             #links01 li a:hover {
                 text-decoration: none;
             }
+			
+			
+			
+	            form {
+                display: flex;
+                justify-content: var(--flex-alignment);
+            }
+            form .inner {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                max-width: 100%;
+            }
+            form label {
+                direction: var(--site-language-direction);
+                display: block;
+            }
+            form .field button {
+                align-items: center;
+                background-color: transparent;
+                border: 0;
+                cursor: pointer;
+                display: flex;
+                justify-content: center;
+            }
+            form .field button > svg {
+                height: 50%;
+                min-width: 100%;
+            }
+            form input[type="text"],
+            form input[type="email"],
+            form input[type="tel"],
+            form input[type="number"],
+            form textarea,
+            form select,
+            form .file {
+                background-color: transparent;
+                border: 0;
+                direction: var(--site-language-direction);
+                display: block;
+                outline: 0;
+                text-align: var(--site-language-alignment);
+                width: 100%;
+            }
+            form input[type="tel"] {
+                -webkit-appearance: none;
+            }
+            form textarea {
+                height: 10rem;
+                line-height: normal;
+            }
+            form select {
+                background-repeat: no-repeat;
+                background-size: 1rem;
+                text-overflow: ellipsis;
+                -webkit-appearance: none;
+            }
+            form select option {
+                background-color: white;
+                color: black;
+            }
+            form select::-ms-expand {
+                display: none;
+            }
+            form input[type="checkbox"] {
+                -webkit-appearance: none;
+                display: block;
+                float: left;
+                margin-right: -2rem;
+                opacity: 0;
+                width: 1rem;
+                z-index: -1;
+            }
+            form input[type="checkbox"] + label {
+                align-items: center;
+                display: inline-flex;
+                line-height: 1.6;
+                text-align: left;
+            }
+            form input[type="checkbox"] + label:before {
+                background-position: center;
+                background-repeat: no-repeat;
+                content: "";
+                cursor: pointer;
+                display: inline-block;
+                flex-grow: 0;
+                flex-shrink: 0;
+                vertical-align: middle;
+            }
+            form input[type="number"] {
+                -webkit-appearance: none;
+                -moz-appearance: textfield;
+            }
+            form input[type="number"]::-webkit-inner-spin-button,
+            form input[type="number"]::-webkit-outer-spin-button {
+                -webkit-appearance: none;
+            }
+            form .number {
+                position: relative;
+            }
+            form .number > input[type="number"] {
+                text-align: center;
+            }
+            form .number > button {
+                position: absolute;
+            }
+            form .field .number > button > svg {
+                height: 40%;
+            }
+            form .file {
+                position: relative;
+            }
+            form .file > button {
+                position: absolute;
+            }
+            form .file > input[type="file"] {
+                cursor: pointer;
+                height: 100%;
+                left: 0;
+                opacity: 0;
+                position: absolute;
+                top: 0;
+                width: 100%;
+            }
+            form .file[data-filename]:before {
+                background-repeat: no-repeat;
+                content: attr(data-filename);
+                display: block;
+                height: 100%;
+                overflow: hidden;
+                position: absolute;
+                text-overflow: ellipsis;
+                top: 0;
+                white-space: nowrap;
+            }
+            form .file[data-filename=""]:before {
+                background-image: none !important;
+                content: attr(data-placeholder);
+                padding-left: 0 !important;
+            }
+            form .field .file > button > svg {
+                height: 53%;
+            }
+            form .actions {
+                max-width: 100%;
+            }
+            form .actions button {
+                align-items: center;
+                background-color: transparent;
+                border: 0;
+                cursor: pointer;
+                display: inline-flex;
+                justify-content: center;
+                max-width: 100%;
+                text-align: center;
+                vertical-align: middle;
+                white-space: nowrap;
+            }
+            form .actions button:disabled {
+                cursor: default;
+                opacity: 0.35;
+                pointer-events: none;
+            }
+            @keyframes button-spinner {
+                0% {
+                    transform: rotate(0deg);
+                }
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+            #form01 .inner > * {
+                margin: 1rem 0 0 0;
+                max-width: 100%;
+            }
+            #form01 .inner > :first-child {
+                margin: 0;
+            }
+            #form01 .inner {
+                width: 25rem;
+            }
+            #form01 label:first-child {
+                margin: 0.25rem 0 0.75rem 0;
+                font-size: 1em;
+                line-height: 1.5;
+                font-family: "Lato", sans-serif;
+                font-weight: 700;
+                color: #757575;
+            }
+            #form01 .field button {
+                background-size: 0.9rem;
+                height: 1.8rem;
+                line-height: 1.8rem;
+                width: 1.8rem;
+                border-radius: 0.24rem;
+                border: solid 2px #b13d7c;
+                transition: color 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
+            }
+            #form01 .field button svg {
+                fill: #b13d7c;
+                transition: fill 0.25s ease;
+            }
+            #form01 input[type="text"],
+            #form01 input[type="email"],
+            #form01 input[type="tel"],
+            #form01 input[type="number"],
+            #form01 textarea,
+            #form01 select,
+            #form01 input[type="checkbox"] + label,
+            #form01 .file {
+                font-size: 1em;
+                font-family: "Lato", sans-serif;
+                font-weight: 700;
+                border-radius: 0.375rem;
+            }
+            #form01 input[type="text"],
+            #form01 input[type="email"],
+            #form01 input[type="tel"],
+            #form01 input[type="number"],
+            #form01 textarea,
+            #form01 select,
+            #form01 .file {
+                color: #757575;
+                border: solid 1px #b13d7c;
+            }
+            #form01 input[type="checkbox"] + label {
+                color: #757575;
+            }
+            #form01 input[type="text"],
+            #form01 input[type="email"],
+            #form01 input[type="tel"],
+            #form01 input[type="number"],
+            #form01 select,
+            #form01 .file {
+                height: 2.25rem;
+                padding: 0 0.7875rem;
+                line-height: calc(2.25rem - 2px);
+            }
+            #form01 textarea {
+                padding: 0.7875rem;
+                height: 10rem;
+                line-height: 1.75;
+                padding-top: 0.48125rem;
+            }
+            #form01 select {
+                background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='504' height='552' preserveAspectRatio='none' viewBox='0 0 504 552'%3E%3Cpath d='M483.9,210.9L252,442.9L20.1,210.9l67.9-67.9L252,307.1l164.1-164.1L483.9,210.9z' fill='%23B13D7C' /%3E%3C/svg%3E");
+                background-position: calc(100% - 0.7875rem) center;
+                padding-right: 2.4375rem;
+            }
+            #form01 input[type="checkbox"] + label:before {
+                border-radius: 0.375rem;
+                color: #757575;
+                border: solid 1px #b13d7c;
+                background-size: 0.95625rem;
+                height: 1.6875rem;
+                width: 1.6875rem;
+                margin-right: 0.875rem;
+            }
+            #form01 input[type="checkbox"]:checked + label:before {
+                background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='648' height='552' preserveAspectRatio='none' viewBox='0 0 648 552'%3E%3Cpath d='M225.3,517.7L2.1,293.1l68.1-67.7L226,382.3L578.1,35.6l67.4,68.4L225.3,517.7z' fill='%23757575' /%3E%3C/svg%3E");
+            }
+            #form01 .number > input[type="number"] {
+                padding-left: 2.3rem;
+                padding-right: 2.3rem;
+            }
+            #form01 .number > button.decrement {
+                bottom: calc(0.225rem - 0px);
+                left: calc(0.225rem - 0px);
+            }
+            #form01 .number > button.increment {
+                bottom: calc(0.225rem - 0px);
+                right: calc(0.225rem - 0px);
+            }
+            #form01 .file:before {
+                width: calc(100% - 3.0375rem);
+                background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' preserveAspectRatio='none' viewBox='0 0 40 40'%3E%3Cpath d='M27.4,4.5c-0.4-0.4-0.8-0.7-1.5-0.9c-0.6-0.3-1.2-0.4-1.7-0.4H7.1c-0.5,0-0.9,0.2-1.3,0.5S5.3,4.5,5.3,5.1v30.7 c0,0.5,0.2,0.9,0.5,1.3c0.4,0.4,0.8,0.5,1.3,0.5h25.8c0.5,0,0.9-0.2,1.3-0.5c0.4-0.4,0.5-0.8,0.5-1.3V13.7c0-0.5-0.1-1.1-0.4-1.7 c-0.3-0.6-0.6-1.1-0.9-1.5L27.4,4.5z M25.7,6.2l6,6c0.2,0.2,0.3,0.4,0.4,0.8h-7.2V5.8C25.3,5.9,25.5,6.1,25.7,6.2z M7.7,35.2V5.7 h14.7v8c0,0.5,0.2,0.9,0.5,1.3c0.4,0.4,0.8,0.5,1.3,0.5h8v19.7H7.7z' style='opacity: 0.375' fill='%23757575' /%3E%3C/svg%3E");
+                background-size: 1rem;
+                background-position: left;
+                padding-left: 1.4rem;
+            }
+            #form01 .file > button {
+                bottom: calc(0.225rem - 1px);
+                right: calc(0.225rem - 1px);
+            }
+            #form01 .actions button {
+                display: inline-block;
+                width: 5.75rem;
+                height: 2.25rem;
+                line-height: calc(2.25rem - 4px);
+                padding: 0 0.5rem;
+                text-transform: uppercase;
+                font-size: 0.625em;
+                font-family: "Lato", sans-serif;
+                letter-spacing: 0.15rem;
+                padding-left: calc(0.15rem + 0.5rem);
+                font-weight: 700;
+                border-radius: 0.375rem;
+                direction: var(--site-language-direction);
+                overflow: hidden;
+                text-overflow: ellipsis;
+                color: #b13d7c;
+                border: solid 2px #b13d7c;
+                transition: color 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
+                position: relative;
+            }
+            #form01 .inner > :first-child > label:first-child {
+                margin-top: 0;
+            }
+            #form01 .actions button:before {
+                animation: button-spinner 1s infinite linear;
+                background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iOTZweCIgaGVpZ2h0PSI5NnB4IiB2aWV3Qm94PSIwIDAgOTYgOTYiIHpvb21BbmRQYW49ImRpc2FibGUiPjxzdHlsZT5jaXJjbGUge2ZpbGw6IHRyYW5zcGFyZW50OyBzdHJva2U6ICNCMTNEN0M7IHN0cm9rZS13aWR0aDogMnB4OyB9PC9zdHlsZT48ZGVmcz48Y2xpcFBhdGggaWQ9ImNvcm5lciI+PHBvbHlnb24gcG9pbnRzPSIwLDAgNDgsMCA0OCw0OCA5Niw0OCA5Niw5NiAwLDk2IiAvPjwvY2xpcFBhdGg+PC9kZWZzPjxnIGNsaXAtcGF0aD0idXJsKCNjb3JuZXIpIj48Y2lyY2xlIGN4PSI0OCIgY3k9IjQ4IiByPSIzMiIvPjwvZz48L3N2Zz4=");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: 1.6875rem;
+                content: "";
+                display: block;
+                height: 1.6875rem;
+                left: 50%;
+                margin: -0.84375rem 0 0 -0.84375rem;
+                opacity: 0;
+                pointer-events: none;
+                position: absolute;
+                top: 50%;
+                transition: opacity 0.25s ease;
+                transition-delay: 0s;
+                width: 1.6875rem;
+            }
+            #form01 .actions button.waiting {
+                color: transparent;
+            }
+            #form01 .actions button.waiting svg {
+                fill: transparent;
+            }
+            #form01 .actions button.waiting:before {
+                opacity: 1;
+                transition-delay: 0.125s;
+            }
+            #form01 ::-webkit-input-placeholder {
+                color: #757575;
+                opacity: 0.55;
+            }
+            #form01 :-moz-placeholder {
+                color: #757575;
+                opacity: 0.55;
+            }
+            #form01 ::-moz-placeholder {
+                color: #757575;
+                opacity: 0.55;
+            }
+            #form01 :-ms-input-placeholder {
+                color: #757575;
+                opacity: 0.55;
+            }
+            #form01 .file[data-filename=""]:before {
+                color: #757575;
+                opacity: 0.55;
+            }
+            #form01 input[name="www-url"] {
+                display: none;
+            }
+			
+			
             .icc-credits {
                 display: block;
                 opacity: 1 !important;
@@ -2107,6 +2469,12 @@
                 }
             </style>
         </noscript>
+		 <script src="https://www.google.com/recaptcha/api.js"></script>
+  <script>
+   function onSubmit(token) {
+     document.getElementById("form01").submit();
+   }
+ </script>
     </head>
     <body class="is-loading">
         <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 40 40" display="none" width="0" height="0">
@@ -2198,14 +2566,87 @@
                                 <div class="inner">
                                     <p id="text06">
                                         <span class="p">
+										<!--
                                             Coming Soon<br />
                                             Please email me with any questions using the email button below:
+											-->
+											Please use the contact form below to email me any support questions or comments you may have.<br />
+											<div align="center" id="text10"><div align="center">
+
+								   <form id="form01" method="post" action="https://hartquiz-cgi.supjessica.com/contact_form_handler.php">
+                            <div class="inner">
+                                <div class="field"><input type="text" name="name" id="form01-name" placeholder="Name" maxlength="128" required /></div>
+                                <div class="field"><input type="email" name="email" id="form01-email" placeholder="Email" maxlength="128" required /></div>
+                                <div class="field"><textarea data-gramm_editor="false" name="message" id="form01-message" placeholder="Message" maxlength="16384" required></textarea></div>
+                                <div class="actions"><button type="submit" class="g-recaptcha" 
+        data-sitekey="6LdWSBcpAAAAAFaEEGIp5X89Rhc9447qAeptiwDK" 
+        data-callback='onSubmit' 
+        data-action='submit'>Submit</button></div>
+                            </div>
+                            <input type="hidden" name="id" value="form01" />
+                        </form>
+											<!--
+											<form method="post" name="contact_form"
+action="https://hartquiz-cgi.supjessica.com/contact_form_handler.php" class="p">
+    <div class="inner"><span class="p">Your Name:<br/>
+    <input type="text" name="name" size="30" style="border: 1px solid #f0f0f0; border-radius: 0.25rem;  line-height: calc(2.25rem - 2px); padding: 0 0.5rem;"></span><div>
+    <div class="inner"><span class="p">Email Address:<br/>
+    <input type="text" name="email" size="30"></span></div>
+
+    <div class="inner"><span class="p">Message:<br/>
+    <textarea name="message" rows="8" cols="50"></textarea></span></div>
+
+    <input type="submit" value="Submit">
+</form>	-->
+											</div></div>
+											<!--
                                             <ul id="icons01" class="icons">
                                             <li>
                                              <a class="n01" href="mailto:HartQuiz-support@hartquiz.supjessica.com?subject=HartQuiz%20Support%20Inquiry" aria-label="Email">
                                                   <svg><use xlink:href="#icon-c0646d28bbeb18e39eb973f96b44bd0f"></use></svg><span class="label">Email</span>
                                               </a>
                                             </li>
+                                          </ul>
+										  -->
+									   </span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                      
+                    </section>
+					<section id="thanks-section">
+                        <h2 id="text05">HartQuiz Support - Thanks!</h2>
+                        <div id="image03" class="image">
+                            <span class="frame"><img src="assets/images/help146.png" alt=""  width="100" height="100" style="height: 100px; width: 100px;" /></span>
+                        </div>
+                        <div id="container03" class="container default">
+                            <div class="wrapper">
+                                <div class="inner">
+                                    <p id="text06">
+                                        <span class="p">
+                                            Thanks! Your message has been sent.<br/>
+											If a response is needed I will try to respond as soon as possible!
+                                          </ul>
+									   </span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                      
+                    </section>
+					<section id="error-section">
+                        <h2 id="text05">HartQuiz Support - Error!</h2>
+                        <div id="image03" class="image">
+                            <span class="frame"><img src="assets/images/help146.png" alt=""  width="100" height="100" style="height: 100px; width: 100px;" /></span>
+                        </div>
+                        <div id="container03" class="container default">
+                            <div class="wrapper">
+                                <div class="inner">
+                                    <p id="text06">
+                                        <span class="p">
+                                            Missing or invalid entries in contact form.<br/>
+											Please go back and try again.<br/>&nbsp;<br/>Be sure to fill out every required field and confirm that the email address entered is valid.
                                           </ul>
 									   </span>
                                     </p>
